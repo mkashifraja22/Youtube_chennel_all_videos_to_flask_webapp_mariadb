@@ -1,7 +1,7 @@
 import mariadb
 # Enter your channel id and your API key
 channel_id = 'UCFbRInXctfkG3o9gcVd2qog'
-API_KEY = "AIzaSyCOvC0mIYhMP4ene-mBqL5LJVaibwdpEKg"
+API_KEY = "you api key"
 
 # MariaDB credentials
 

@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+<!-- Page Loader -->
+{% block body %}
+
+
+<div class="container-fluid tm-container-content tm-mt-60">
+    <div class="row mb-4">
+        <center>
+        <h2 class="col-6 tm-text-primary">
+            All Comments
+        </h2>
+            </center>
+        <div class="col-6 d-flex justify-content-end align-items-center">
+
+        </div>
+    </div>
+        <div class="row mb-3 tm-gallery">
+            <section>
+                <div class="container">
+                    {% for data in data_list%}
+                    <div class="row">
+
+                        <div class="col-sm-5 col-md-6 col-12 pb-4">
+
+                            <div class="comment mt-6 text-justify float-left">
+
+<!--                                <img src="{{ url_for('static', filename='user.png') }}" alt="" class="rounded-circle" width="40" height="40">-->
+                                <h4 style="color: white">{{ data.username}}</h4>
+                                 <span style="color: #5fa69b">(Track)-> {{data.video_title}}</span> <br>
+                                <span style="color: white"> {{ data.date}}</span>
+                                <br>
+                                <p>{{ data.comment}}</p>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    {% endfor %}
+                </div>
+            </section>
+        </div> <!-- row -->
+    <div class="row tm-mb-90">
+        <div class="text-right">
+            <div class="col-12 d-flex justify-content-between align-items-center tm-paging-col" style="color: white">
+                {{ pagination.info }}
+                <div class="tm-paging d-flex">
+
+                    <br>
+                    {{ pagination.links }}
+
+                </div>
+
+            </div>
+        </div>
+    </div> <!-- container-fluid, tm-container-content -->
+</div>
+{% endblock %}
